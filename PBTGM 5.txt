@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string nama,jurusan;
+    int umur;
+    float nilai;
+    char grade;
+    bool lulus;
+
+    cout << "==============================\n";
+    cout << "      PROGRAM DATA MAHASISWA       \n" <<endl;
+    cout << "==============================\n";
+
+    cout << "Masukkan nama  : ";
+    getline(cin, nama);
+
+    cout << "Masukkan umur : ";
+    cin >> umur;
+    
+    cout << "Masukkan jurusan : ";
+    cin.ignore();
+    getline(cin,jurusan);
+    
+    cout << "Masukkan nilai akhir : ";
+    cin >> nilai;
+    
+     if (nilai >= 90)
+        grade = 'A';
+        
+     else if (nilai >= 80)
+        grade = 'B';
+        
+     else if (nilai >= 70)
+        grade = 'C';
+        
+    else if (nilai >= 60)
+        grade = 'd';
+        
+     else
+        grade = 'E';
+        
+    lulus =(nilai >=70);
+
+
+    cout << "\n---------------HASIL DATA MAHASISWA---------------\n"<< endl;
+    cout << "Nama        : " << nama << endl;
+    cout << "Umur        : " << umur << "Tahun" << endl;
+    cout << "Jurusan     : " << jurusan << endl;
+    cout << "Nilai       : " << nilai << endl;
+	cout << "Grade       : " << grade << endl;
+    cout << "Nama        : " << nama << endl;
+    cout << "Status      : " << (lulus ? "lulus" : "Tidak lulus")<< endl;
+
+
+   
+
+    return 0;
+}
+
